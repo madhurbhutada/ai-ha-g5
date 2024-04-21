@@ -15,6 +15,14 @@
         .blog-content p {
             font-size: 20px; /* font size for the blog content */
         }
+        .blog-content img {
+            margin-left: 60px;
+        }
+        .refrences {
+            padding: 20px; /* padding around the content */
+            margin: 0 auto; /* center the box horizontally */
+            max-width: 800px; /* maximum width for the box */
+        }
     </style>
 </head>
 <body>
@@ -26,8 +34,122 @@
     <br>
 
     <div class="blog-content">
+        <h2>Artificial Intelligence</h2>
+        <p align="justify">
+            According to a research survey conducted to find out the impact of AI in healthcare industry, <b>64%</b>
+            of the doctors use AI in their workplace and <b>86%</b> of the doctors believe that AI will replace them in the
+            near future.  
+            <br>
+            According to a research firm, Frost & Sullivan, Ai has the potential to reduce the treatment costs by <b>50%</b>
+            while imporving the patient outcomes by <b>30% to 40%.</b>
+            <br>
+        </p>
+        <hr>
+        <h2>Why do we need AI in Medicine Discovery (or Drug Discovery)?</h2>
         <p>
-            Blog Content Goes Here. 
+            There are multiple reasons why AI can be very useful in Drug Discovery. Here are a few of them:
+            <ol>
+                <li>To speed up the drug discovery process</li>
+                <li>To predict 3D structure of target protein</li>
+                <li>To predict drug-protein interactions</li>
+                <li>To predict drug activity</li>
+            </ol>
+        </p>
+        <p>
+            Apart from drug discovery, AI has vast use cases. It can also be used in polypharmacology,
+            chemical synthesis, drug repurposing, drug screening, etc. In our blog, 
+            we will be focusing on Drug Discovery.
+        </p>
+        <hr>
+        <p>
+            As discussed above, drug discovery applications focus on predicting the three-dimensional structure of
+            the molecules. The molecules may be proteins, DNA, RNA or other drugs/medicines.
+            <br>
+            To predict the target protein, a protein is identified, whose modulation has the potential to alter
+            the disease state of a person. Despite hvaing almost <b>20,000</b> protiens, only <b>3,000</b> have been identified as
+            potential targets.  
+        </p>
+        <hr>
+        <p>
+            Famous Compound and Bio-Activity Databases:
+            <ol>
+                <li>PubChem</li>
+                <li>ChEMBL</li>
+                <li>DrugBank</li>
+                <li>ZINC</li>
+            </ol>
+        </p>
+        <p>
+            Famous Target and Chemical Databases
+            <ol>
+                <li>PDB</li>
+                <li>Atom3D</li>
+                <li>TTD</li>
+                <li>MoleculeNet</li>
+            </ol>
+        </p>
+        <hr>
+        <h2>Role of AI Drug Discovery</h2>
+        <p>Graphical Neural Networks are used to establish a relationship between Target Protein and Disease.
+            <br>
+            Variational Autoencoder (VAE) is used to generate synthetic data.
+        </p>
+        <h3>How does GNN work?</h3>
+        <p> Imagine a GNN as a system that understands relationships and connections between different pieces of data, represented as a graph. Each node in the graph corresponds to some entity, like a user or an item in a recommendation system, and the edges represent the relationships between them.
+            <br>
+            Now, when we say "understand," what we really mean is that the GNN can learn patterns from these connections. It does this by passing messages between nodes, updating their internal representations based on the information received from their neighbors. This process happens iteratively, allowing the network to capture increasingly complex relationships and dependencies within the data.
+            <br>
+            In simpler terms, the GNN looks at how things are connected to each other and learns from those connections to make better predictions or classifications.</p>
+        <h3>Use of GNN in Drug Discovery</h3>
+        <p>
+                <u>Step 1:</u> Small molecule drugs can also be depicted as graphs, with atoms as nodes and chemical bonds as edges.
+                <br>
+                <u>Step 2:</u> Node feature vectors (X) are constructed by combining various properties of atoms, such as mass (m), electron number (e), and charge (c), denoted as:
+                
+                    X=[m,e,c]
+                <br>
+                <u>Step 3:</u> These feature vectors are then stacked into a matrix X. To capture the underlying structure of molecules, the stacked feature matrix (X) is multiplied by the adjacency matrix (A), yielding:
+                    X’ = X x A, where
+                
+                    X′ represents the transformed feature matrix capturing the structural relationships within molecules.</li>
+        </p>
+        <br>
+        <h3>How does Variational Autoencoder (VAE) work?</h3>
+        <p>
+            It is made up of two parts- 
+            <ul> <li>Encoder</li> <li>Decoder</li> </ul>
+        </p>
+        <p>
+            The encoder network takes an input data point, such as an image, and maps it to a probability distribution in a lower-dimensional latent space.
+            <br>
+            During training, the VAE reconstructs input data points from sampled latent variables using a decoder network. 
+            <br>
+            It is trained to minimize a reconstruction loss, ensuring accurate reconstruction, while also regularizing the latent space distribution to match a predefined prior distribution, typically a standard Gaussian.
+        </p>
+        <h3>Use of VAE in Drug Discovery</h3>
+        <p>
+            <u>Step 1:</u> The neural network converts the discrete input molecule into a Gaussian distribution. 
+            <br>
+            <u>Step 2:</u> The latent variables are reparametrized against the mean and variance. 
+            <br>
+            <u>Step 3:</u> The decoder generates a new molecule from the sampled latent space.
+        </p>
+        <h2>Use Cases and Hopes</h2>
+        <p>
+            <ul>
+                <li>Pharmaceuticals employed computational chemistry and modeling to develop Zomig, a migraine medication that is now approved.</li>
+                <li>Insilico Medicine created Generative Tensorial Reinforcement Learning (GENTRL) AI, a system capable of discovering and successfully testing novel chemicals in 46 days, making the entire procedure 15 times faster.</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <div class="refrences">
+        <h2>
+            Refrences
+        </h2>
+        <p>
+            <a href="https://bmcmededuc.biomedcentral.com/counter/pdf/10.1186/s12909-023-04698-z.pdf">https://bmcmededuc.biomedcentral.com/counter/pdf/10.1186/s12909-023-04698-z.pdf</a>
         </p>
     </div>
 </body>
